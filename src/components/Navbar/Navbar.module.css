@@ -1,0 +1,307 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbarWrapper {
+  /* position: fixed; */
+  left: 0;
+  right: 0;
+  /* background-color: green; */
+}
+
+/* Navbar */
+/* Base Navbar Styling */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* z-index: 1000; */
+  max-width: 1536px;
+  margin: 0px auto;
+  /* background-color: red; */
+}
+
+/* Large Desktops (1440px and above) */
+@media screen and (max-width: 1440px) {
+  .navbar {
+    padding: 10px 80px;
+  }
+}
+
+/* Laptops & Smaller Desktops (1280px and below) */
+@media screen and (max-width: 1280px) {
+  .navbar {
+    padding: 10px 60px;
+  }
+}
+
+/* Tablets & Medium Devices (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+}
+
+/* Smaller Tablets & Large Phones (900px and below) */
+@media screen and (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+}
+
+/* Mobile Devices (768px and below) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 10px;
+  }
+}
+
+/* Small Phones (600px and below) */
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0px 0px;
+  }
+}
+
+/* Extra Small Phones (350px and below) */
+@media screen and (max-width: 350px) {
+  .navbar {
+    padding: 10px 0px;
+    display: flex;
+  }
+ 
+}
+
+/* Navbar Components */
+.navbarComponents {
+  display: flex;
+  align-items: center;
+  width: 75%;
+
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 735px) and (max-width: 1024px) {
+  .navbarComponents {
+    width: 75%;
+  }
+  .navbar {
+    padding: 0px 50px;
+  }
+}
+
+/* Search Bar */
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 40px;
+  border-radius: 6.5px;
+  border: 0.8px solid #efefef;
+  background: #fff;
+  box-shadow: 0px 1.6px 3.2px 0px rgba(0, 0, 0, 0.25);
+  padding: 5px 15px;
+  /* gap: 8px; */
+}
+
+.searchBar input {
+  /* flex-grow: 1; */
+  border: none;
+  outline: none;
+  font-size: 14px;
+
+  /* background: red; */
+}
+
+.searchIcon,
+.filterIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: green; */
+}
+
+.searchIcon svg,
+.filterIcon svg {
+  cursor: pointer;
+}
+
+/* Icons Container */
+.iconsContainer {
+  background-color: white;
+  padding: 4px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15))
+    drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.cartCount,
+.wishlistCount {
+  position: absolute;
+  background-color: #f88e12;
+  color: white;
+  padding: 3px 7px;
+  font-size: 11px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -8px;
+  right: 0px;
+  /* display: none; */
+}
+
+@media (max-width: 750px) {
+  .iconsContainer {
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 50%;
+  }
+}
+
+.shoppingCart {
+  font-size: 25px;
+}
+
+/* Bottom Navigation (Hidden by Default) */
+.bottomNav {
+  display: none;
+  background-color: red;
+  height: 100px;
+}
+
+/* Responsive Design for 768px */
+@media screen and (max-width: 900px) {
+  .navbar .iconsContainer {
+    display: none; /* Hide top icons */
+  }
+
+  .bottomNav {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+    left: 0;
+    width: 100%;
+    background-color: #0E315D;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px ;
+    z-index: 100;
+    height: 70px;
+    /* background: white; */
+    justify-content: space-around;
+    /* height: fit-content; */
+    /* box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); */
+  }
+
+  .bottomNav .iconsContainer {
+    width: 7.5%; /* Equal spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shoppingCart {
+    font-size: 28px;
+  }
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  /* position: fixed; */
+  left: 0;
+  right: 0;
+}
+
+.topBar {
+  width: 100%;
+  height: 40px;
+  background: #0a1b48;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Default Menu List */
+.topBarMenu {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topBarMenu li {
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.topBarMenu li:hover {
+  text-decoration: underline;
+}
+
+/* Default: Hide hamburger on large screens */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Responsive - Hide menu & Show hamburger */
+@media screen and (max-width: 800px) {
+  .topBarMenu {
+    display: none; /* Hide the menu */
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger */
+    align-items: center;
+  }
+}
+
+/* Show menu when hamburger is clicked */
+.showMenu {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: #0a1b48;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.showMenu li {
+  padding: 10px 10px;
+  color: #fff;
+}

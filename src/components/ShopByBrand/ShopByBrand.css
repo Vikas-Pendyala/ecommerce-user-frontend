@@ -1,0 +1,103 @@
+.brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom:60px;
+}
+
+@media (max-width: 480px) {
+    .brands img {
+      width: 80px;
+      max-height: 60px;
+    }
+  }
+@media (max-width:450px) {
+    .brands{
+        display: flex;
+        gap: 10px;
+        
+    }
+   
+}
+.brand-head{
+    color: #252525;
+font-family: Poppins;
+font-size: 21px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-left:150px ;
+margin-bottom: 24px;
+}
+
+.explore-btn{
+    border-radius: 8px;
+border: 1px solid var(--secondary-600, #3A6766);
+background: #0E315D;
+display: flex;
+height: 32px;
+padding: 16px;
+align-items: center;
+gap: 4px;
+color: #FFF;
+font-family: Poppins;
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+/* margin-right: 150px; */
+margin-bottom: 20px;
+
+
+}
+
+.name-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand-container {
+    display: flex;
+    justify-content: space-between; /* Ensures space between title and button */
+    align-items: center;
+    width: 100%; /* Makes sure it spans full width */
+    padding: 20px 150px; /* Adds padding for spacing */
+  }
+  
+  .brand-head {
+    color: #252525;
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0; /* Remove unnecessary margins */
+  }
+  
+  .explore-btn {
+    border-radius: 8px;
+    border: 1px solid var(--secondary-600, #3A6766);
+    background: #0E315D;
+    display: flex;
+    height: 32px;
+    padding: 16px;
+    align-items: center;
+    gap: 4px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1025px) {
+    .brand-container {
+      padding: 0 60px; /* Adjust padding for smaller screens */
+    }
+  }
+  @media (max-width: 450px) {
+    .brand-container {
+      padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+  }
+  

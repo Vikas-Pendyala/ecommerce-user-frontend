@@ -1,0 +1,101 @@
+.brandHead{
+    color: #252525;
+font-family: Poppins;
+font-size: 21px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-left:150px ;
+margin-bottom: 24px;
+}
+
+.exploreBtn{
+    border-radius: 8px;
+border: 1px solid var(--secondary-600, #3A6766);
+background: #0E315D;
+display: flex;
+height: 32px;
+padding: 16px;
+align-items: center;
+gap: 4px;
+color: #FFF;
+font-family: Poppins;
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+/* margin-right: 150px; */
+margin-bottom: 20px;
+}
+
+.brandContainer {
+    display: flex;
+    justify-content: space-between; /* Ensures space between title and button */
+    align-items: center;
+    width: 100%; /* Makes sure it spans full width */
+    padding: 20px 150px; /* Adds padding for spacing */
+  }
+  
+  .brandHead {
+    color: #252525;
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0; /* Remove unnecessary margins */
+  }
+  
+  .exploreBtn {
+    border-radius: 8px;
+    border: 1px solid var(--secondary-600, #3A6766);
+    background: #0E315D;
+    display: flex;
+    height: 32px;
+    padding: 16px;
+    align-items: center;
+    gap: 4px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1025px) {
+    .brandContainer {
+      padding: 0 60px; /* Adjust padding for smaller screens */
+    }
+  }
+  @media (max-width: 450px) {
+    .brandContainer {
+      padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+  }
+  .Display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Adjust for screens 450px and below */
+@media (max-width: 450px) {
+    .Display {
+        gap: 8px; /* Reduce spacing */
+        max-width: 100%; /* Ensure it fits smaller screens */
+        padding: 0 10px; /* Add padding to prevent edge clipping */
+    }
+
+    .Display img {
+        width: 110px; /* Reduce image sizes */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .Display div {
+        width: 100px; /* Adjust divs inside if applicable */
+    }
+}
+
+

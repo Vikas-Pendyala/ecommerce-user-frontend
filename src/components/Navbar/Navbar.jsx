@@ -1,0 +1,84 @@
+import styles from "./Navbar.module.css";
+import { useState } from "react";
+
+import { TiShoppingCart } from "react-icons/ti";
+import { FaRegHeart } from "react-icons/fa";
+import { IoMdPerson } from "react-icons/io";
+import { IoSearch } from "react-icons/io5";
+import { FaSliders } from "react-icons/fa6";
+import { GiHamburgerMenu } from "react-icons/gi";
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <div className={`${styles.listContainer}`}>
+      <div className={`${styles.navbarWrapper} `}>
+        <div className={`${styles.navbar} `}>
+          <div>
+            <img src="/images/logo.jpg" alt="" style={{ width: "100px" }} />
+          </div>
+          {/*Navbar components  */}
+          <div className={`${styles.navbarComponents}`}>
+            {/* Search bar */}
+            <div className={`${styles.searchBar}`}>
+              <div className={`${styles.searchIcon}`}>
+                <IoSearch />
+              </div>
+              <input type="text" placeholder="Search..." />
+              <div className={`${styles.filterIcon}`}>
+                <FaSliders />
+              </div>
+            </div>
+            {/* Shopping cart */}
+            <div className={`${styles.iconsContainer}`}>
+              <TiShoppingCart className={`${styles.shoppingCart}`} />
+              <div className={`${styles.cartCount}`}>1</div>
+            </div>
+            <div className={`${styles.iconsContainer}`}>
+              <FaRegHeart className={`${styles.shoppingCart}`} />
+              <div className={`${styles.wishlistCount}`}>1</div>
+            </div>
+            <div className={`${styles.iconsContainer}`}>
+              <IoMdPerson className={`${styles.shoppingCart}`} />
+            </div>
+          </div>
+        </div>
+        {/* Bottom Navigation (Visible on Small Screens) */}
+        <div className={`${styles.bottomNav}`}>
+          <div className={`${styles.iconsContainer}`}>
+            <TiShoppingCart className={`${styles.shoppingCart}`} />
+            <div className={`${styles.cartCount}`}>1</div>
+          </div>
+          <div className={`${styles.iconsContainer}`}>
+            <FaRegHeart className={`${styles.shoppingCart}`} />
+            <div className={`${styles.wishlistCount}`}>1</div>
+          </div>
+          <div className={`${styles.iconsContainer}`}>
+            <IoMdPerson className={`${styles.shoppingCart}`} />
+          </div>
+        </div>
+      </div>
+
+      {/* <div className={`${styles.topBar}`}></div> */}
+      <div className={styles.topBar}>
+        {/* Hamburger Menu (visible only on small screens) */}
+        <div
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <GiHamburgerMenu />
+        </div>
+        <ul className={menuOpen ? styles.showMenu : styles.topBarMenu}>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Categories</li>
+          <li>Track Order</li>
+          <li>Help</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export default Navbar;
