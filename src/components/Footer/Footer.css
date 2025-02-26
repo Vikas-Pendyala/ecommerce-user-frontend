@@ -4,6 +4,10 @@
     padding: 40px 0;
     display: flex;
     justify-content: center;
+    /* position: fixed;
+   bottom: 0px;
+   left: 0px;
+   right: 0px; */
   }
   
   .footer-container {
