@@ -4,7 +4,7 @@ const Hero = () => {
     <div className="main-container">
       <div>
         <h1 className="Heading">
-          Unlock Your <span>Mobile’s</span>
+          Unlock Your <span className="mobile-span">Mobile’s</span>
         </h1>
         <h1 className="Heading">True Potential</h1>
       </div>
