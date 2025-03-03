@@ -5,6 +5,7 @@ import ShopByBrand from "./components/ShopByBrand/ShopByBrand";
 import ShopByCategories from "./components/ShopByCategories/ShopByCategories";
 import LandingPage from './components/LandingPage/LandingPage';
 import Products from "./components/Products/Products";
+import Cart from "./components/Cart/Cart";
 
 function Layout() {
   return (
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products/>
+      },
+      {
+        path:"/cart",
+        element: <Cart/>
       }
     ],
   },
