@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./Cart.module.css";
-
+import { useCart } from "../context/CartContext";
 const CartItem = ({ product, onQuantityChange, onRemove }) => {
   return (
     <tr className={styles.cartItem}>
@@ -65,7 +65,7 @@ export default function ShoppingCart() {
       price: 1250,
     },
     {
-      id: 1,
+      id: 3,
       name: "LCD with Touch Screen",
       code: "LCD12345",
       image: "/images/product1.png",
@@ -73,7 +73,7 @@ export default function ShoppingCart() {
       price: 1809,
     },
     {
-      id: 2,
+      id: 4,
       name: "LCD with Touch Screen",
       code: "LCD54321",
       image: "/images/product1.png",
@@ -83,8 +83,11 @@ export default function ShoppingCart() {
     
   ]);
 
+  const { setCartCount} = useCart();
+
   const updateQuantity = (id, quantity) => {
     if (quantity < 1) return;
+    setCartCount((prevCount) => prevCount + 1)
     setCart(cart.map((item) => (item.id === id ? { ...item, quantity } : item)));
   };
 
