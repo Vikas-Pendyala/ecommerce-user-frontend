@@ -2,7 +2,7 @@ import styles from "./ShopByCategories.module.css";
 
 const ShopByCategories = () => {
   return (
-    <div>
+    <div id="shop">
        <div className={`${styles.brandContainer}`}>
     <h2 className={`${styles.brandHead}`}>Shop by Categories</h2>
     <button className={`${styles.exploreBtn}`}>Explore</button>

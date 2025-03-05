@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import { useState } from "react";
+import { useCart } from "../context/CartContext"; // Import the context
 
 import { TiShoppingCart } from "react-icons/ti";
 import { FaRegHeart } from "react-icons/fa";
@@ -7,17 +8,22 @@ import { IoMdPerson } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { FaSliders } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { cartCount } = useCart();
+
+  // Calculate total cart items
+  // const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <div className={`${styles.listContainer}`}>
       <div className={`${styles.navbarWrapper} `}>
         <div className={`${styles.navbar} `}>
           <div>
-            <img src="/images/logo.jpg" alt="" style={{ width: "100px" }} />
+            <img src="/images/logo.jpg" alt="Logo" style={{ width: "100px" }} />
           </div>
-          {/*Navbar components  */}
+          {/* Navbar components  */}
           <div className={`${styles.navbarComponents}`}>
             {/* Search bar */}
             <div className={`${styles.searchBar}`}>
@@ -32,7 +38,9 @@ function Navbar() {
             {/* Shopping cart */}
             <div className={`${styles.iconsContainer}`}>
               <TiShoppingCart className={`${styles.shoppingCart}`} />
-              <div className={`${styles.cartCount}`}>1</div>
+              {cartCount > 0 && (
+                <div className={`${styles.cartCount}`}>{cartCount}</div>
+              )}
             </div>
             <div className={`${styles.iconsContainer}`}>
               <FaRegHeart className={`${styles.shoppingCart}`} />
@@ -47,8 +55,13 @@ function Navbar() {
         <div className={`${styles.bottomNav}`}>
           <div className={`${styles.iconsContainer}`}>
             <TiShoppingCart className={`${styles.shoppingCart}`} />
-            <div className={`${styles.cartCount}`}>1</div>
+            {cartCount > 0 && (
+              <div className={`${styles.cartCount}`}>{cartCount}</div>
+            )}
           </div>
+
+
+
           <div className={`${styles.iconsContainer}`}>
             <FaRegHeart className={`${styles.shoppingCart}`} />
             <div className={`${styles.wishlistCount}`}>1</div>
@@ -59,9 +72,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* <div className={`${styles.topBar}`}></div> */}
       <div className={styles.topBar}>
-        {/* Hamburger Menu (visible only on small screens) */}
         <div
           className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}

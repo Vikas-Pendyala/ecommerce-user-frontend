@@ -225,7 +225,7 @@ hr {
   display: flex;
   justify-content: center;  /* Centers horizontally */
   align-items: center;      /* Centers vertically */
-  height: 80vh;            
+  /* min-height: 80vh;             */
   gap: 40px;                /* Space between cart and summary */
 }
 
