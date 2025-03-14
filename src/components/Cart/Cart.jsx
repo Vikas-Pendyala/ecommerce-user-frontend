@@ -133,7 +133,7 @@ export default function ShoppingCart() {
           <h4>Shipping Address</h4>
           <p>
             House No. 27, Sector 9 <br />
-            Rajendra Nagar <br />
+            Rajendra Nagar <br/>
             Ghaziabad, Uttar Pradesh 201001 <br />
             India
           </p>
@@ -149,7 +149,7 @@ export default function ShoppingCart() {
           </div>
           <div className={styles.row}>
             <span>Delivery Charges</span>
-            <span>₹ {deliveryCharges}</span>
+            <span>₹ {deliveryCharges}</span> 
           </div>
           <div className={`${styles.row} ${styles.total}`}>
             <span>Total</span>

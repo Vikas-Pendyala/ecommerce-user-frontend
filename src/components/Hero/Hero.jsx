@@ -1,12 +1,28 @@
 import "./Hero.css";
+import Pratheek ,{employee2,employee1,employee4,employee5}from "./../data";
+import Test from "./../Test.jsx"
 const Hero = () => {
+  let count = 1;
+  const increaseCount = () => {
+    count += 1;
+    console.log('COUNT: ', count)
+  }
   return (
     <div className="main-container">
+      {
+        `${Pratheek}`
+      }
+      <Test/>
+
+      <div className="">
+        <h1>Couunt: {count}</h1>
+        <button onClick={increaseCount}>increase count</button>
+      </div>
       <div>
         <h1 className="Heading">
           Unlock Your <span className="mobile-span">Mobile’s</span>
         </h1>
-        <h1 className="Heading">True Potential</h1>
+        <h1 className="Heading">True Potential{`----------   ${employee2}`}</h1>
       </div>
 
       <div className="hero-container">
@@ -15,7 +31,7 @@ const Hero = () => {
           <div className="para1">
             <p>
               Welcome to 5 Mags, your one-stop destination for all Mobile
-              Accessories.
+              Accessories.{`----------   ${employee1}`}
             </p>
           </div>
 
@@ -35,19 +51,18 @@ const Hero = () => {
         </div>
         {/* middle container */}
 
-       <div className="mobile-container">
-       <div className="mobile">
-        
-        <img src="/images/mobile.png" alt="" />
-      
-      </div>
-      <div className="para-hide">
-       <p>
-            Your ultimate hub for top quality mobile accessories that keep you
-            connected, protected, and stylish
-          </p>
-       </div>
-       </div>
+        <div className="mobile-container">
+          <div className="mobile">
+            <img src="/images/mobile.png" alt="" />
+          </div>
+          <div className="para-hide">
+            <p>
+              
+              Your ultimate hub for top quality mobile accessories that keep you
+              connected, protected, and stylish
+            </p>
+          </div>
+        </div>
         {/* right 2nd container */}
         <div className="right-container">
           <div className="cable">
@@ -67,13 +82,13 @@ const Hero = () => {
           <div className="para1">
             <p>
               Your ultimate hub for top quality mobile accessories that keep you
-              connected, protected, and stylish
+              connected, protected, and stylish{`----------   ${employee4}`}
             </p>
           </div>
         </div>
       </div>
       <div className="btn">
-        <p className="butn">Shop Now</p>
+        <p className="butn">Shop Now{`----------   ${employee5}`}</p>
       </div>
     </div>
   );
